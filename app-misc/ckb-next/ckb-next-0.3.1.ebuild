@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils kde5-functions linux-info systemd vcs-snapshot
+inherit cmake-utils kde5-functions linux-info systemd
 
 DESCRIPTION="Open source driver for Corsair keyboards and mice"
 HOMEPAGE="https://github.com/ckb-next/ckb-next"
@@ -20,6 +20,7 @@ REQUIRED_USE="
 	animations? ( qt5 )
 	${ANIMATIONS_USE[@]/%/? ( animations )}
 "
+RESTRICT="mirror"
 
 DOCS=( CHANGELOG.md README.md )
 
