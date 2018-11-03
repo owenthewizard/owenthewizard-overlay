@@ -54,10 +54,14 @@ src_unpack() {
 	tar -C "${S}/libraries/quazip" -x --strip-components 1 -f "${DISTDIR}/${QUAZIP_P}.tar.gz" || die
 }
 
-#src_prepare() {
-#	epatch "${FILESDIR}/fortify-fix.patch"
-#	cmake-utils_src_prepare
-#}
+src_prepare() {
+	#epatch "${FILESDIR}/fortify-fix.patch"
+	epatch "${FILESDIR}/fix-qt11.patch"
+	cd "${S}/libraries/quazip" || die
+	epatch "${FILESDIR}/fix-qt11-quazip.patch"
+	cd -
+	cmake-utils_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=(
