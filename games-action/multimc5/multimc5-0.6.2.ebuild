@@ -31,10 +31,10 @@ DOCS=( changelog.md README.md )
 COMMON_DEPEND="
 	$(add_qt_dep qtconcurrent)
 	$(add_qt_dep qtcore)
-	$(add_qt_dep qtgui)
+	$(add_qt_dep qtgui)[png]
 	$(add_qt_dep qtnetwork)
 	$(add_qt_dep qttest)
-	$(add_qt_dep qtwidgets)
+	$(add_qt_dep qtwidgets)[png]
 	$(add_qt_dep qtxml)
 "
 DEPEND="
