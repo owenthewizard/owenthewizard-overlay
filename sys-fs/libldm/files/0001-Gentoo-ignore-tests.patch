@@ -1,0 +1,12 @@
+diff -u a/Makefile.am b/Makefile.am
+--- a/Makefile.am       2018-04-26 05:32:45.000000000 -0500
++++ b/Makefile.am       2019-03-13 00:33:48.675339578 -0500
+@@ -18,7 +18,7 @@
+ 
+ DISTCHECK_CONFIGURE_FLAGS=--enable-gtk-doc
+ 
+-SUBDIRS = src test docs/reference/libldm docs/reference/ldmtool
++SUBDIRS = src docs/reference/libldm docs/reference/ldmtool
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = ldm-1.0.pc
