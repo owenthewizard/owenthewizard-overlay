@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <use>
+    <flag name="gtk">Build the LSI Settings UI</flag>
+    <flag name="libintercept">Enable libintercept library for controlling Steam linking</flag>
+    <flag name="libredirect">Enable libredirect library for fine-tuning Steam games</flag>
+    <flag name="patch">Install glibc patch to fix performance with +libintercept</flag>
+  </use>
+</pkgmetadata>
