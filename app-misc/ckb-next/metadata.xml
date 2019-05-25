@@ -2,16 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <use>
-    <flag name="animations">Build with animations.</flag>
-    <flag name="mviz">Build with music visualizer.</flag>
-    <flag name="qt5">Build with Qt GUI to manipulate animations.</flag>
-    <flag name="system-quazip">Use system-wide dev-libs/quazip instead of bundled.</flag>
-	<flag name="animations_gradient">Build gradient animation.</flag>
-	<flag name="animations_heatmap">Build heatmap animation.</flag>
-	<flag name="animations_rain">Build rain animation.</flag>
-	<flag name="animations_random">Build random animation.</flag>
-	<flag name="animations_pinwheel">Build pinwheel animation.</flag>
-	<flag name="animations_ripple">Build ripple animation.</flag>
-	<flag name="animations_wave">Build wave animation.</flag>
+    <flag name="animations">Build with animations</flag>
+    <flag name="mviz">Build with music visualizer</flag>
+    <flag name="qt5">Build with Qt GUI to manipulate animations</flag>
+    <flag name="system-quazip">Use system-wide dev-libs/quazip instead of bundled</flag>
+	<flag name="animations_gradient">Build gradient animation</flag>
+	<flag name="animations_heatmap">Build heatmap animation</flag>
+	<flag name="animations_rain">Build rain animation</flag>
+	<flag name="animations_random">Build random animation</flag>
+	<flag name="animations_pinwheel">Build pinwheel animation</flag>
+	<flag name="animations_ripple">Build ripple animation</flag>
+	<flag name="animations_wave">Build wave animation</flag>
   </use>
 </pkgmetadata>
