@@ -1,9 +1,9 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit cmake-utils linux-info systemd
+inherit cmake linux-info
 
 DESCRIPTION="Open source driver for Corsair keyboards and mice"
 HOMEPAGE="https://github.com/ckb-next/ckb-next"
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+animations +mviz +qt5 +system-quazip"
+IUSE="+animations +mviz +qt5"
 REQUIRED_USE="
 	animations? ( qt5 )
 "
@@ -28,19 +28,16 @@ RDEPEND="
 	qt5? (
 		dev-libs/libdbusmenu-qt
 		>=dev-libs/quazip-1.0
+		>=dev-qt/linguist-tools-5.5.1
 		>=dev-qt/qtcore-5.5.1
 		>=dev-qt/qtdbus-5.5.1
 		>=dev-qt/qtgui-5.5.1
 		>=dev-qt/qtnetwork-5.5.1
 		>=dev-qt/qtwidgets-5.5.1
 		>=dev-qt/qtx11extras-5.5.1
-		media-sound/pulseaudio
-		sys-libs/zlib
-		x11-libs/libICE
-		x11-libs/libSM
+		media-libs/libpulse
 		x11-libs/libxcb
 		x11-libs/xcb-util-wm
-		x11-libs/libXext
 	)
 	virtual/udev
 "
@@ -57,7 +54,6 @@ src_configure() {
 		-DWITH_ANIMATIONS="$(usex animations)"
 		-DWITH_MVIZ="$(usex mviz)"
 		-DWITH_GUI="$(usex qt5)"
-		-DWITH_SHIPPED_QUAZIP="$(usex system-quazip no yes)"
 		-DWITH_GRADIENT="$(usex animations)"
 		-DWITH_HEAT="$(usex animations)"
 		-DWITH_RAIN="$(usex animations)"
@@ -70,7 +66,7 @@ src_configure() {
 		-DWITH_INVADERS="$(usex animations)"
 		-DWITH_LIFE="$(usex animations)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 pkg_postinst() {
